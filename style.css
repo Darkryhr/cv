@@ -19,6 +19,11 @@
   --base-lighter: #fcfcfc;
   --base-darker: #e2e2e2;
   --text: #12181b;
+  --gradient: linear-gradient(
+    to right,
+    var(--color-white),
+    var(--color-white-dark)
+  );
 }
 
 .dark {
@@ -26,6 +31,11 @@
   --base-lighter: #34343b;
   --base-darker: #1b1b1f;
   --text: #f8f8f8;
+  --gradient: linear-gradient(
+    to right,
+    var(--color-black),
+    var(--color-black-light)
+  );
 }
 
 * {
@@ -36,7 +46,8 @@
 }
 
 body {
-  background: var(--base-darker);
+  background: var(--base);
+  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
 a {
@@ -49,7 +60,7 @@ a {
   top: 0;
   height: 100%;
   width: 78px;
-  background: var(--base);
+  background: var(--base-lighter);
   padding: 6px 14px;
   z-index: 99;
   transition: all 0.5s ease;
@@ -210,12 +221,12 @@ a {
 }
 
 .home-section {
-  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
   top: 0;
   left: 78px;
   width: calc(100% - 78px);
@@ -260,9 +271,7 @@ p {
   border-radius: 100%;
   width: 100px;
   height: 100px;
-  margin-top: 20px;
-  margin-bottom: 8px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 15px 0;
 }
 
 .avatar > img {
@@ -279,8 +288,12 @@ p {
 
 footer {
   background-color: var(--black);
+  filter: brightness(1.2);
   height: 80px;
-  width: 100%;
+  width: calc(100% - 78px);
+  position: relative;
+  top: 0;
+  left: 78px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -288,6 +301,11 @@ footer {
 
 footer > p {
   color: #fff;
+  font-size: x-small;
+  font-weight: 600;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 .skills {
@@ -305,7 +323,7 @@ footer > p {
 
 .skill-bar {
   height: 16px;
-  background: var(--base-darker);
+  background: var(--base);
   border-radius: 4px;
 }
 
@@ -359,7 +377,7 @@ footer > p {
   font-size: 20px;
   font-weight: 600;
   background: var(--gradient-primary);
-  color: var(--base-lighter);
+  color: #fff;
   padding: 14px 26px;
   margin-top: 12px !important;
   border-radius: 100px;
@@ -389,4 +407,11 @@ footer > p {
   opacity: 0.2;
   margin-top: 5px;
   margin-bottom: 10px;
+}
+.lead {
+  font-weight: 600;
+  opacity: 0.8;
+  font-size: smaller;
+  letter-spacing: 8px;
+  text-transform: uppercase;
 }
