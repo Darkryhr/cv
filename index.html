@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gabriel Lellouche | CV</title>
   </head>
-  <body>
+  <body class="dark">
     <div class="sidebar">
       <div class="logo-details">
         <i class="bx"></i>
@@ -20,6 +20,13 @@
         <i class="bx bx-menu" id="btn"></i>
       </div>
       <ul class="nav-list">
+        <li>
+          <a class="nav-link" id="theme" href="#">
+            <i class="bx bxs-sun"></i>
+            <span class="links_name">Switch Theme</span>
+          </a>
+          <span class="tooltip">Theme</span>
+        </li>
         <li>
           <a class="nav-link" href="#about">
             <i class="bx bx-user"></i>
@@ -52,26 +59,30 @@
         <div class="avatar">
           <img src="/avatar.png" alt="my dum mug" />
         </div>
-        <div class="bg">
-          <h1>Gabriel Lellouche</h1>
-        </div>
+        <div class="bg"></div>
+        <h1>Gabriel Lellouche</h1>
 
         <p>I'm a Designer & Developer</p>
       </div>
     </section>
     <section class="home-section" id="about">
       <div class="inner">
-        <div class="text">About Me</div>
+        <div class="text">
+          <h1>About Me</h1>
+        </div>
+        <div class="divider"></div>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
-          harum autem. Eveniet possimus ea sed ex accusamus doloremque nesciunt
-          maxime!
+          I'm an aspiring Full-Stack Developer and Graphic Designer.<br />Based
+          in Israel but prefer to work globally.<br />I'm very passionate about
+          learning and always get a thrill from solving problems and overcoming
+          difficulties
         </p>
       </div>
     </section>
 
     <section class="home-section" id="skills">
-      <div class="text">Skills</div>
+      <div class="text"><h1>Skills</h1></div>
+      <div class="divider"></div>
       <div class="skills">
         <div class="skill">
           <div class="skill-name">HTML</div>
@@ -91,16 +102,39 @@
             <div class="skill-per" per="90%" style="max-width: 90%"></div>
           </div>
         </div>
+        <div class="skill">
+          <div class="skill-name">Typescript</div>
+          <div class="skill-bar">
+            <div class="skill-per" per="60%" style="max-width: 60%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">React</div>
+          <div class="skill-bar">
+            <div class="skill-per" per="80%" style="max-width: 80%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">NoSQL</div>
+          <div class="skill-bar">
+            <div class="skill-per" per="80%" style="max-width: 80%"></div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="home-section" id="experience">
       <div class="text">
         <h1>Experience</h1>
-        <p>Looking to gain Experience</p>
-        <a href="https://gabriel-lellouche.carrd.co/" class="btn">Contact Me</a>
       </div>
+
+      <div class="divider"></div>
+
+      <p>Looking to gain Experience</p>
+      <a href="https://gabriel-lellouche.carrd.co/" class="btn">Contact Me</a>
     </section>
-    <footer></footer>
+    <footer>
+      <p>Gabriel Lellouche</p>
+    </footer>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

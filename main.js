@@ -1,5 +1,6 @@
 let sidebar = document.querySelector('.sidebar');
 let closeBtn = document.querySelector('#btn');
+let themeBtn = document.querySelector('#theme');
 
 closeBtn.addEventListener('click', () => {
   sidebar.classList.toggle('open');
@@ -44,4 +45,17 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 allSections.forEach((section) => {
   sectionObserver.observe(section);
   section.classList.add('hidden');
+});
+
+let theme = false;
+themeBtn.addEventListener('click', (e) => {
+  if (theme) {
+    e.target.classList.replace('bxs-moon', 'bxs-sun');
+    document.querySelector('body').classList.replace('light', 'dark');
+    theme = !theme;
+  } else {
+    e.target.classList.replace('bxs-sun', 'bxs-moon');
+    document.querySelector('body').classList.replace('dark', 'light');
+    theme = !theme;
+  }
 });
